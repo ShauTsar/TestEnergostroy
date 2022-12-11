@@ -1,0 +1,14 @@
+{% extends 'HtmlViews/base.html' %}
+
+{% block content %}
+{% for test in tests %}
+
+<h2>{{ test.title }}</h2>
+<p>{{test.text }}</p>
+<img src="{{ test.image.url }}">
+{% if test.url %}
+<br><a href=" test.url">Link</a>
+{% endif %}
+{% endfor %}
+
+{% endblock %}
